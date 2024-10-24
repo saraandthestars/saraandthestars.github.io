@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Kim</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <link rel="icon" href="assets/starlogo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/signature.png" alt="Signature Image">
+    </div>
+  </header>
+
+  <nav>
+    <div class="musicportfolio-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current-page">Music Portfolio</a></li>
+        <li><a href="csportfolio.html">Code Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Star container outside the header -->
+  <div class="star-container">
+    <!-- Generate stars dynamically using JavaScript -->
+    <script>
+      // Create stars with random animation durations and delays
+      for (let i = 0; i < 500; i++) {
+        createStar(i); // Pass index to createStar function
+      }
+
+      // Function to create a star element with random position, animation duration, and delay
+      function createStar(index) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDuration = Math.random() * 4 + 2 + 's'; // Random duration between 2 and 6 seconds
+        
+        // Apply random pastel color to create softer appearance
+        const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360 degrees (full spectrum)
+        const saturation = Math.floor(Math.random() * 20 + 30); // Random saturation between 50% and 70%
+        const lightness = Math.floor(Math.random() * 20 + 80); // Random lightness between 70% and 90%
+        star.style.backgroundColor = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)'; // Set background color using HSL color format
+        
+        document.querySelector('.star-container').appendChild(star); // Append star to the container
+      }
+    </script>
+  </div>
+
+  <div class="container main-content musicportfolio-page">
+    <h2>Music</h2>
+    <p>Here are some singing/song samples. I am currently working on producing more complex tracks and writing more original songs!</p>
+    <br>
+    <p>(Click on a sample to learn more!)</p>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#9214 Dreams by Stevie Nicks</h4>
+    </button>
+    <div class="content">
+      <audio controls autoplay>
+        <source src="assets/musicportfolio/Dreams.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#9729 Someone Like You by Adele</h4>
+    </button>
+    <div class="content">
+      <audio controls autoplay>
+        <source src="assets/musicportfolio/SomeoneLikeYou.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <br>
+    
+    <button type="button" class="collapsible">
+      <h4>&#9730 When I Was Your Man by Bruno Mars</h4>
+    </button>
+    <div class="content">
+      <audio controls autoplay>
+        <source src="assets/musicportfolio/WhenIWasYourMan.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#9732 Pink Pony Club by Chappell Roan</h4>
+    </button>
+    <div class="content">
+      <audio controls autoplay>
+        <source src="assets/musicportfolio/PinkPonyClub.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#9728 Beautiful Things by Benson Boone</h4>
+    </button>
+    <div class="content">
+      <audio controls autoplay>
+        <source src="assets/musicportfolio/BeautifulThings.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
+
+</body>
+</html>
