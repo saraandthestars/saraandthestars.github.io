@@ -72,7 +72,7 @@ body {
 header {
   background: transparent; /* Set header background to transparent */
   color: #fff;
-  padding: 20px 0;
+  padding: 0px 0;
   text-align: center;
   position: fixed; /* Set header position to relative */
 }
@@ -158,11 +158,11 @@ nav ul li a.current-page {
   background: linear-gradient(to bottom, rgba(255, 125, 125, 0.5), rgba(255, 202, 123, 0.5), rgba(235, 255, 120, 0.5), rgba(121, 255, 116, 0.5), rgba(127, 138, 255, 0.5), rgba(190, 121, 255, 0.5), rgba(255, 127, 217, 0.5));
   padding: 25px;
   margin: 0 auto; /* Center the container horizontally */
-  margin-top: 80px;
+  margin-top: 25px;
   width: calc(100vw - 100px);
   border-radius: 10px;
   overflow-y: auto;
-  height: calc(100vh - 170px);
+  height: calc(100vh - 100px);
   /*border: 1px solid white; */
 }
 
@@ -246,13 +246,14 @@ footer {
 
 .self-portrait img {
   width: calc(0.35*(100vw - 100px)); /* Adjust the width to your preference */
-  height: auto; /* Maintain aspect ratio */
+  height: calc(0.35*(100vw - 100px)); /* Maintain aspect ratio */
   border-radius: 10px; /* Add rounded corners */
-  float: right; /* Float the image to the left */
-  margin-left: 20px;
-  margin-top: 6px;
-  margin-right: 10px;
+  float: left; /* Float the image to the left */
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 15px;
 }
+
 
 .self-portrait ul {
   list-style-type: none; /* Remove default bullet points */
@@ -459,12 +460,13 @@ button:hover {
 .collapsible {
   background-color: rgba(255, 255, 255, 0.3);
   color: rgb(255, 255, 255);
-  padding: 15px;
+  padding: 10px;
   width: calc(100vw - 100px);
   border: none;
   text-align: left;
   outline: none;
   border-radius: 10px 10px 10px 10px;
+  margin-top: 15px;
 }
 
 .collapsible:hover {
